@@ -23,3 +23,7 @@ PRODUCT_PACKAGES += \
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.mtk_nn_baseline_support=1
+
+# VINTF
+DEVICE_MANIFEST_FILE += \
+    $(MTK_COMMON_PATH)/vendor/neuralnetworks/nn-manifest.xml
