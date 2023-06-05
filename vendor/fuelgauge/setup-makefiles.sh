@@ -1,1 +1,0 @@
-../../setup-makefiles.sh
