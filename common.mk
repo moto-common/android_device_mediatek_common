@@ -15,5 +15,8 @@
 MTK_COMMON_PATH := device/mediatek/common
 MTK_VENDOR_PATH := vendor/mediatek/common
 
+# Utils
+include $(MTK_COMMON_PATH)/utils.mk
+
 # Components
 include $(MTK_COMMON_PATH)/components.mk
