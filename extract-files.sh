@@ -69,7 +69,7 @@ function blob_fixup() {
     esac
 }
 
-# Get the COMPONENT, KERNEL_VERSION, and VENDOR from the current directory
+# Get the COMPONENT, COMP_VERSION, and VENDOR from the current directory
 CURRENT_DIR="$(pwd)"
 if [[ "$(basename $(realpath $CURRENT_DIR/../..))" == "system" ]] || \
    [[ "$(basename $(realpath $CURRENT_DIR/..))" == "system" ]] ; then
@@ -79,12 +79,12 @@ elif [[ "$(basename $(realpath $CURRENT_DIR/../..))" == "vendor" ]] || \
     VENDOR="mediatek/common/vendor"
 fi
 
-# Extract the kernel version if it follows the format x.y
-if [[ "${CURRENT_DIR}" =~ /([0-9]+\.[0-9]+)$ ]]; then
-    KERNEL_VERSION="${BASH_REMATCH[1]}"
+# Extract the component version
+if [[ "${CURRENT_DIR}" =~ /([0-9]+\.[0-9]+)$ ]] || [[ "${CURRENT_DIR}" =~ /(mt[0-9]+)$ ]]; then
+    COMP_VERSION="${BASH_REMATCH[1]}"
 fi
 
-if [ ! -z "${KERNEL_VERSION}" ]; then
+if [ ! -z "${COMP_VERSION}" ]; then
     COMPONENT=$(basename $(realpath "$CURRENT_DIR/.."))
 else
     COMPONENT=$(basename "$CURRENT_DIR")
@@ -93,8 +93,8 @@ fi
 echo $COMPONENT
 echo $VENDOR
 # Initialize the helper
-if [ ! -z "${KERNEL_VERSION}" ]; then
-    setup_vendor "${COMPONENT}/${KERNEL_VERSION}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}" "${COMPONENT}" true
+if [ ! -z "${COMP_VERSION}" ]; then
+    setup_vendor "${COMPONENT}/${COMP_VERSION}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}" "${COMPONENT}" true
 else
     setup_vendor "${COMPONENT}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}" "" true
 fi
