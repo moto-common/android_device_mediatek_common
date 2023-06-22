@@ -236,4 +236,7 @@
 
     <!-- Support decoding of GSM 8 bit encoded SMS-->
     <bool translatable="false" name="config_sms_decode_gsm_8bit_data">true</bool>
+
+    <!-- True if the device supports system navigation keys. -->
+    <bool name="config_supportSystemNavigationKeys">true</bool>
 </resources>
