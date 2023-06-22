@@ -1,6 +1,5 @@
 # Sensors
 vendor/bin/capsense_reset
-vendor/etc/sensors/hals.conf
 vendor/lib/libhwm.so
 vendor/lib64/hw/sensors.mt6768.so
 vendor/lib64/libhwm.so

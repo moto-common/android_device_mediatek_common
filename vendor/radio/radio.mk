@@ -12,9 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_COPY_FILES += \
-    $(MTK_COMMON_PATH)/vendor/wlan/vendor_hals.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_hals/vendor_hals.xml
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio@1.0.vendor \
+    android.hardware.radio@1.1.vendor \
+    android.hardware.radio@1.2.vendor \
+    android.hardware.radio@1.3.vendor \
+    android.hardware.radio@1.4.vendor \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio@1.6.vendor
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.wifi.sap.concurrent.iface=ap1 \
-    ro.vendor.wifi.sap.interface=ap0
+# VINTF
+DEVICE_MANIFEST_FILE += \
+    $(MTK_COMMON_PATH)/vendor/radio/radio-manifest.xml

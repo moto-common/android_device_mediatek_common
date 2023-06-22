@@ -27,3 +27,8 @@ DEVICE_MANIFEST_FILE += \
     $(MTK_COMMON_PATH)/vendor/keymaster-trustonic/gatekeeper-manifest.xml \
     $(MTK_COMMON_PATH)/vendor/keymaster-trustonic/keymaster-manifest.xml \
     $(MTK_COMMON_PATH)/vendor/keymaster-trustonic/trustonic-manifest.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.kmsetkey=trustonic \
+    ro.hardware.gatekeeper=trustonic \
+    ro.vendor.mtk_trustonic_tee_support=1

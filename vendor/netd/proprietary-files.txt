@@ -1,0 +1,10 @@
+# Netd
+vendor/bin/netdagent
+vendor/etc/init/netdagent.rc
+vendor/lib64/libforkexecwrap.so
+vendor/lib64/libifcutils_mtk.so
+vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
+
+# Tether
+vendor/bin/hw/tetheroffloadservice
+vendor/etc/init/tetheroffloadservice.rc

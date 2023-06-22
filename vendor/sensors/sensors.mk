@@ -14,4 +14,8 @@
 
 # HAL
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service.multihal
+    android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service
+
+# VINTF
+DEVICE_MANIFEST_FILE += $(MTK_COMMON_PATH)/vendor/sensors/android.hardware.sensors_v1.0.xml

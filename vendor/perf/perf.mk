@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_COPY_FILES += \
-    $(MTK_COMMON_PATH)/vendor/wlan/vendor_hals.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_hals/vendor_hals.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.wifi.sap.concurrent.iface=ap1 \
-    ro.vendor.wifi.sap.interface=ap0
+PRODUCT_PACKAGES += \
+    libmtkperf_client_vendor \
+    vendor.mediatek.hardware.mtkpower@1.0.vendor \
+    vendor.mediatek.hardware.mtkpower@1.1.vendor \
+    vendor.mediatek.hardware.mtkpower@1.2.vendor \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub

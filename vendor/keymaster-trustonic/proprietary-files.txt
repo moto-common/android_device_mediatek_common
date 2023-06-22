@@ -8,6 +8,7 @@ vendor/etc/init/android.hardware.keymaster@4.1-service.trustonic.rc
 vendor/lib64/hw/kmsetkey.trustonic.so
 
 # Trustonic TEE
+# STOPSHIP, move vendor/app/mcRegistry to device tree
 vendor/app/mcRegistry/020b0000000000000000000000000000.drbin
 vendor/app/mcRegistry/020b0000000000000000000000000000.tlbin
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin

@@ -15,3 +15,7 @@
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-service
+
+# Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.mtk_log_hide_gps=1

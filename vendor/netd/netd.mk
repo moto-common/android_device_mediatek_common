@@ -12,9 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_COPY_FILES += \
-    $(MTK_COMMON_PATH)/vendor/wlan/vendor_hals.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_hals/vendor_hals.xml
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.0.vendor \
+    android.hardware.tetheroffload.control@1.1.vendor
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.wifi.sap.concurrent.iface=ap1 \
-    ro.vendor.wifi.sap.interface=ap0
+DEVICE_MANIFEST_FILE += \
+    $(MTK_COMMON_PATH)/vendor/netd/netd-manifest.xml

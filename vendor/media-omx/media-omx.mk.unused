@@ -12,9 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Configs
 PRODUCT_COPY_FILES += \
-    $(MTK_COMMON_PATH)/vendor/wlan/vendor_hals.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_hals/vendor_hals.xml
+    $(MTK_COMMON_PATH)/vendor/media-omx/configs/mtk_omx_core.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_omx_core.cfg
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.wifi.sap.concurrent.iface=ap1 \
-    ro.vendor.wifi.sap.interface=ap0
+# Packages
+PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-service
