@@ -26,4 +26,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hwc.min.duration=23000000
 
 DEVICE_MANIFEST_FILE += \
-    $(MTK_COMMON_PATH)/vendor/display/$(TARGET_BOARD_PLATFORM)/pq-manifest.xml
+    $(MTK_COMMON_PATH)/vendor/display/$(TARGET_BOARD_PLATFORM)/display-manifest.xml
