@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Init
+PRODUCT_COPY_FILES += \
+    $(MTK_COMMON_PATH)/vendor/neuralnetworks/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
+
 # Interfaces
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.0.vendor \
