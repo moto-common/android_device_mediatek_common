@@ -15,6 +15,9 @@
 # Global Display Configuration
 include $(MTK_COMMON_PATH)/vendor/display/display.mk
 
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-service
+
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.use_phase_offsets_as_durations=1 \
     debug.sf.late.sf.duration=30000000 \

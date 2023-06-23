@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Kernel Cmdline
+BOARD_KERNEL_CMDLINE += bootopt=64S3,32N2,64N2
+
 # MTK Common Components
 include $(MTK_COMMON_PATH)/components-logic.mk
 include $(COMPONENT_BOARD_INCLUDES)
