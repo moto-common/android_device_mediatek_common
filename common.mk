@@ -20,3 +20,6 @@ include $(MTK_COMMON_PATH)/utils.mk
 
 # Components
 include $(MTK_COMMON_PATH)/components.mk
+
+# UEventD
+PRODUCT_COPY_FILES += $(MTK_COMMON_PATH)/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
