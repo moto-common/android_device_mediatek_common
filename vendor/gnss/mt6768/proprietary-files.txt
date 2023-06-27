@@ -1,0 +1,6 @@
+# GNSS
+vendor/bin/mnld
+vendor/bin/mtk_agpsd
+vendor/lib64/hw/gps.default.so
+vendor/lib64/libDR.so
+vendor/lib64/libmnl.so

@@ -14,8 +14,13 @@
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-service
+    android.hardware.gnss@2.1-impl-mediatek \
+    android.hardware.gnss-impl-mediatek \
+    android.hardware.gnss-service.mediatek
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.mtk_log_hide_gps=1
+
+# Vendor
+$(call inherit-product, vendor/mediatek/common/vendor/gnss/gnss-vendor.mk)
