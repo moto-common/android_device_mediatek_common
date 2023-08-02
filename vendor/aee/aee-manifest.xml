@@ -1,0 +1,15 @@
+<manifest version="1.0" type="device">
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.aee</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IAee</name>
+            <instance>AEE</instance>
+        </interface>
+        <interface>
+            <name>IAee</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>

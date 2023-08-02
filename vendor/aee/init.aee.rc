@@ -1,0 +1,27 @@
+on post-fs-data
+    mkdir /data/vendor/aee_exp 0775 root root
+    mkdir /data/vendor/dumpsys 0775 system system
+    mkdir /data/vendor/core 0775 system system
+    mkdir /data/vendor/tombstones 0775 system system
+
+on post-fs
+    start aee_aedv64_v2
+
+on property:ro.vendor.aeev.dynamic.switch=disable
+    stop aee_aedv64_v2
+
+on property:sys.boot_completed=1
+    setprop persist.vendor.aeev.log.status 1
+
+on property:persist.vendor.aeev.boot.reason.status=done
+    start aeev_set_last_shutdown_v2
+
+service aee_aedv64_v2 /vendor/bin/aee_aedv64_v2
+    group root readproc system debuggerd log radio
+    writepid /dev/cpuset/system-background/tasks
+
+service aeev_set_last_shutdown_v2 /vendor/bin/aeev_v2 -S
+    oneshot
+    disabled
+    user root
+    group root

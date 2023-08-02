@@ -23,3 +23,6 @@ include $(MTK_COMMON_PATH)/components.mk
 
 # UEventD
 PRODUCT_COPY_FILES += $(MTK_COMMON_PATH)/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
+
+# IRQ Balancer
+PRODUCT_PACKAGES += rebalance_interrupts-vendor

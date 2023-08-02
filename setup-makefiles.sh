@@ -17,7 +17,7 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 SCRIPT_LOCATION=$(readlink -f "${BASH_SOURCE[0]}")
 ANDROID_ROOT=$(dirname $SCRIPT_LOCATION)"/../../.."
 
-HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+HELPER=$(dirname $SCRIPT_LOCATION)"/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -27,6 +27,19 @@ source "${HELPER}"
 # Get the COMPONENT, COMP_VERSION, and VENDOR from the current directory
 CURRENT_DIR="$(pwd)"
 
+# Extract the component version
+if [[ "${CURRENT_DIR}" =~ /([0-9]+\.[0-9]+)$ ]] || [[ "${CURRENT_DIR}" =~ /(mt[0-9]+)$ ]]; then
+    COMP_VERSION="/${BASH_REMATCH[1]}"
+fi
+
+if [ ! -z "${COMP_VERSION}" ]; then
+    _COMPONENT=$(basename $(realpath "$CURRENT_DIR/.."))
+else
+    _COMPONENT=$(basename "$CURRENT_DIR")
+fi
+
+COMPONENT="${_COMPONENT}${COMP_VERSION}"
+
 if [[ "$(basename $(realpath $CURRENT_DIR/../..))" == "system" ]] || \
    [[ "$(basename $(realpath $CURRENT_DIR/..))" == "system" ]] ; then
     VENDOR="mediatek/common/system"
@@ -35,22 +48,11 @@ elif [[ "$(basename $(realpath $CURRENT_DIR/../..))" == "vendor" ]] || \
     VENDOR="mediatek/common/vendor"
 fi
 
-# Extract the component version
-if [[ "${CURRENT_DIR}" =~ /([0-9]+\.[0-9]+)$ ]] || [[ "${CURRENT_DIR}" =~ /(mt[0-9]+)$ ]]; then
-    COMP_VERSION="${BASH_REMATCH[1]}"
-fi
-
-if [ ! -z "${COMP_VERSION}" ]; then
-    COMPONENT=$(basename $(realpath "$CURRENT_DIR/.."))
-else
-    COMPONENT=$(basename "$CURRENT_DIR")
-fi
-
 # Initialize the helper
 if [ ! -z ${COMP_VERSION} ]; then
-    setup_vendor "${COMPONENT}/${COMP_VERSION}" "${VENDOR}" "${ANDROID_ROOT}" false true "${COMPONENT}" true
+    setup_vendor "${COMPONENT}" "${VENDOR}" "${ANDROID_ROOT}" false true "${_COMPONENT}" true
 else
-    setup_vendor "${COMPONENT}" "${VENDOR}" "${ANDROID_ROOT}" false true "" true
+    setup_vendor "${_COMPONENT}" "${VENDOR}" "${ANDROID_ROOT}" false true "" true
 fi
 
 # Warning headers and guards

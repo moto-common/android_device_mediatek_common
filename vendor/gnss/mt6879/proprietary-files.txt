@@ -1,0 +1,7 @@
+# GNSS
+vendor/bin/mnld
+vendor/bin/mtk_agpsd
+vendor/etc/MNL_Config.xml
+vendor/lib64/hw/gps.default.so
+vendor/lib64/mt6879/libDR.so
+vendor/lib64/mt6879/libmnl.so

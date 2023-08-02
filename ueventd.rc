@@ -29,15 +29,21 @@
 /dev/stpwmt               0660   system     system
 /dev/wmtdetect            0660   system     system
 /dev/fw_log_wmt           0660   system     system
+/dev/conninfra_dev        0660   system     system
 
 # BT
 /dev/stpbt                0660   bluetooth  bluetooth
 /dev/fw_log_bt            0660   bluetooth  bluetooth
 
 # GPS
+/dev/fw_log_gps           0660   gps        gps
+/dev/gpsdl0               0660   gps        gps
+/dev/gpsdl1               0660   gps        gps
 /dev/stpgps               0660   gps        gps
 /dev/gps                  0660   gps        system
-/dev/fw_log_gps           0660   gps        gps
+/dev/gps_emi              0660   gps        gps
+/dev/gps2scp              0660   gps        gps
+/dev/gps_pwr              0660   gps        gps
 
 # ANT
 /dev/stpant               0660   system     system
@@ -95,6 +101,7 @@
 /dev/ccci_raw_audio            0660   audio      audio
 /dev/ccci3_raw_audio            0660   audio      audio
 /dev/eemcs_aud            0660   audio      audio
+/dev/audio_ipi            0660   audio      audio
 /dev/irtx                 0660   system     system
 /dev/lirc*                0660   root       system
 /dev/ir-learning          0660   system     system
@@ -125,6 +132,7 @@
 /dev/ttyRB*               0660   radio      radio
 
 # Mali node
+/dev/mali0                0666   system     graphics
 /dev/mali                 0666   system     graphics
 
 # Change ION driver permission
@@ -165,4 +173,51 @@
 
 # ------------------- focal fingerprint begin -------------------
 /dev/focaltech_fp         0660   system     system
+
+#v4l2 device
+/dev/video*      0660 camera system
+/dev/media*      0660 camera system
+/dev/v4l-subdev* 0660 camera system
+/dev/flashlight 0660 camera system
+
+# audio
+/dev/adsp 0660 root media
+/dev/adsp_0 0440 system media
+
+# Change DMA_HEAP deice permission
+#     refs: /system/core/rootdir/uevent.rc
+#           /dev/dma_heap/system      0444   system     system
+/dev/dma_heap/mtk_mm                        0444   system     system
+/dev/dma_heap/mtk_mm-uncached               0444   system     system
+/dev/dma_heap/mtk_svp_page-uncached                 0444   system     system
+/dev/dma_heap/mtk_prot_page-uncached                0444   system     system
+/dev/dma_heap/mtk_svp_region                        0444   system     system
+/dev/dma_heap/mtk_svp_region-aligned                0444   system     system
+/dev/dma_heap/mtk_prot_region                       0444   system     system
+/dev/dma_heap/mtk_prot_region-aligned               0444   system     system
+/dev/dma_heap/mtk_2d_fr_region                      0444   system     system
+/dev/dma_heap/mtk_2d_fr_region-aligned              0444   system     system
+/dev/dma_heap/mtk_wfd_region                        0444   system     system
+/dev/dma_heap/mtk_wfd_region-aligned                0444   system     system
+/dev/dma_heap/mtk_wfd_page-uncached                 0444   system     system
+/dev/dma_heap/mtk_sapu_data_shm_region              0444   system     system
+/dev/dma_heap/mtk_sapu_data_shm_region-aligned      0444   system     system
+/dev/dma_heap/mtk_sapu_engine_shm_region            0444   system     system
+/dev/dma_heap/mtk_sapu_engine_shm_region-aligned    0444   system     system
+
+# Camera
+/dev/camera_eeprom*       0660   system     camera
+/dev/mtk_ccd       0660   system     camera
+/dev/ccu*      0660 system camera
+/dev/mtk_hcp     0660 camera system
+/dev/vcu    0660 camera system
+# Sensor
+/dev/hf_manager       0660   system     system
+# Display
+/dev/mtk_mdp       0660   system     system
+#pq
+/dev/mml_pq       0640   system     system
+
+#nfc
+/dev/nq-nci 0666 nfc nfc
 

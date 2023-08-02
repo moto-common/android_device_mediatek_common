@@ -19,4 +19,5 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     MtkFrameworksResCommon \
     MtkSystemUIResCommon \
+    MtkTelephonyResCommon \
     MtkWifiResCommon

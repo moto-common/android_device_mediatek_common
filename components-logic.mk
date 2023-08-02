@@ -16,8 +16,9 @@
 EXCL := Android.mk
 COMPONENTS := $(filter-out $(EXCL), $(notdir $(wildcard $(MTK_COMMON_PATH)/vendor/*)))
 COMPONENTS += $(filter-out $(EXCL), $(notdir $(wildcard $(MTK_COMMON_PATH)/system/*)))
-COMPONENT_INCLUDES := $(foreach component,$(COMPONENTS),include $(MTK_COMMON_PATH)/vendor/$(component)/$(component).mk)
-COMPONENT_INCLUDES += $(foreach component,$(COMPONENTS),include $(MTK_COMMON_PATH)/system/$(component)/$(component).mk)
+
+# Utils
+include $(MTK_COMMON_PATH)/components-utils.mk
 
 # All handling
 ifneq (,$(filter all, $(TARGET_COMMON_MTK_COMPONENTS)))
@@ -27,38 +28,17 @@ TARGET_COMMON_MTK_COMPONENTS := \
 endif
 
 # Generate the include directives for each component
-COMPONENT_PROD_INCLUDES := $(foreach component,$(COMPONENTS),$(if $(and $(filter $(component),$(TARGET_COMMON_MTK_COMPONENTS)),\
-    $(wildcard $(MTK_COMMON_PATH)/system/$(component)/$(TARGET_BOARD_PLATFORM)/$(component).mk)),\
-    $(MTK_COMMON_PATH)/system/$(component)/$(TARGET_BOARD_PLATFORM)/$(component).mk,\
-    $(if $(wildcard $(MTK_COMMON_PATH)/system/$(component)/$(component).mk),\
-        $(MTK_COMMON_PATH)/system/$(component)/$(component).mk,\
-        $(wildcard $(MTK_COMMON_PATH)/system/$(component)/$(TARGET_KERNEL_VERSION)/$(component).mk))))
+COMPONENT_BOARD_INCLUDES += $(foreach component,$(TARGET_COMMON_MTK_COMPONENTS),$(call add-board-base-component,$(component)))
+COMPONENT_BOARD_INCLUDES += $(foreach component,$(TARGET_COMMON_MTK_COMPONENTS),$(call add-board-board-component,$(component)))
+COMPONENT_BOARD_INCLUDES += $(foreach component,$(TARGET_COMMON_MTK_COMPONENTS),$(call add-board-kernel-component,$(component)))
+COMPONENT_BOARD_INCLUDES := $(sort $(COMPONENT_BOARD_INCLUDES))
 
-COMPONENT_BOARD_INCLUDES := $(foreach component,$(COMPONENTS),$(if $(and $(filter $(component),$(TARGET_COMMON_MTK_COMPONENTS)),\
-    $(wildcard $(MTK_COMMON_PATH)/system/$(component)/$(TARGET_BOARD_PLATFORM)/board.mk)),\
-    $(MTK_COMMON_PATH)/system/$(component)/$(TARGET_BOARD_PLATFORM)/board.mk,\
-    $(if $(wildcard $(MTK_COMMON_PATH)/system/$(component)/board.mk),\
-        $(MTK_COMMON_PATH)/system/$(component)/board.mk,\
-        $(wildcard $(MTK_COMMON_PATH)/system/$(component)/$(TARGET_KERNEL_VERSION)/board.mk))))
+COMPONENT_PROD_INCLUDES += $(foreach component,$(TARGET_COMMON_MTK_COMPONENTS),$(call add-prod-base-component,$(component)))
+COMPONENT_PROD_INCLUDES += $(foreach component,$(TARGET_COMMON_MTK_COMPONENTS),$(call add-prod-board-component,$(component)))
+COMPONENT_PROD_INCLUDES += $(foreach component,$(TARGET_COMMON_MTK_COMPONENTS),$(call add-prod-kernel-component,$(component)))
+COMPONENT_PROD_INCLUDES := $(sort $(COMPONENT_PROD_INCLUDES))
 
-COMPONENT_PROD_INCLUDES += $(foreach component,$(COMPONENTS),$(if $(and $(filter $(component),$(TARGET_COMMON_MTK_COMPONENTS)),\
-    $(wildcard $(MTK_COMMON_PATH)/vendor/$(component)/$(TARGET_BOARD_PLATFORM)/$(component).mk)),\
-    $(MTK_COMMON_PATH)/vendor/$(component)/$(TARGET_BOARD_PLATFORM)/$(component).mk,\
-    $(if $(wildcard $(MTK_COMMON_PATH)/vendor/$(component)/$(component).mk),\
-        $(MTK_COMMON_PATH)/vendor/$(component)/$(component).mk,\
-        $(wildcard $(MTK_COMMON_PATH)/vendor/$(component)/$(TARGET_KERNEL_VERSION)/$(component).mk))))
-
-COMPONENT_BOARD_INCLUDES += $(foreach component,$(COMPONENTS),$(if $(and $(filter $(component),$(TARGET_COMMON_MTK_COMPONENTS)),\
-    $(wildcard $(MTK_COMMON_PATH)/vendor/$(component)/$(TARGET_BOARD_PLATFORM)/board.mk)),\
-    $(MTK_COMMON_PATH)/vendor/$(component)/$(TARGET_BOARD_PLATFORM)/board.mk,\
-    $(if $(wildcard $(MTK_COMMON_PATH)/vendor/$(component)/board.mk),\
-        $(MTK_COMMON_PATH)/vendor/$(component)/board.mk,\
-        $(wildcard $(MTK_COMMON_PATH)/vendor/$(component)/$(TARGET_KERNEL_VERSION)/board.mk))))
-
-VENDOR_PROD_INCLUDES := $(foreach component,$(COMPONENTS),$(if $(and $(filter $(component),$(TARGET_COMMON_MTK_COMPONENTS)),\
-    $(wildcard $(MTK_VENDOR_PATH)/vendor/$(component)/$(TARGET_BOARD_PLATFORM)/$(component)-vendor.mk)),\
-    $(MTK_VENDOR_PATH)/vendor/$(component)/$(TARGET_BOARD_PLATFORM)/$(component)-vendor.mk,\
-    $(if $(wildcard $(MTK_VENDOR_PATH)/vendor/$(component)/$(component)-vendor.mk),\
-        $(MTK_VENDOR_PATH)/vendor/$(component)/$(component)-vendor.mk,\
-        $(wildcard $(MTK_VENDOR_PATH)/vendor/$(component)/$(TARGET_KERNEL_VERSION)/$(component)-vendor.mk))))
-
+VENDOR_PROD_INCLUDES += $(foreach component,$(TARGET_COMMON_MTK_COMPONENTS),$(call add-vendor-base-component,$(component)))
+VENDOR_PROD_INCLUDES += $(foreach component,$(TARGET_COMMON_MTK_COMPONENTS),$(call add-vendor-board-component,$(component)))
+VENDOR_PROD_INCLUDES += $(foreach component,$(TARGET_COMMON_MTK_COMPONENTS),$(call add-vendor-kernel-component,$(component)))
+VENDOR_PROD_INCLUDES := $(sort $(VENDOR_PROD_INCLUDES))

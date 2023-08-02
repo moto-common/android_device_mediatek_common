@@ -1,0 +1,6 @@
+# AEE
+vendor/bin/aee_aedv64_v2
+vendor/bin/aeev_v2
+vendor/bin/mrdump_tool
+vendor/lib64/libaedv.so
+vendor/lib/libaedv.so

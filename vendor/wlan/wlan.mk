@@ -18,3 +18,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.wifi.sap.concurrent.iface=ap1 \
     ro.vendor.wifi.sap.interface=ap0
+
+# WMT
+ifeq ($(TARGET_BOARD_PLATFORM),mt6768)
+ $(call inherit-product, vendor/mediatek/common/vendor/wmt/wmt-vendor.mk)
+else ifeq ($(TARGET_BOARD_PLATFORM),mt6879)
+ $(call inherit-product, vendor/mediatek/common/vendor/connac2x/connac2x-vendor.mk)
+endif

@@ -1,0 +1,8 @@
+include $(CLEAR_VARS)
+
+GATEKEEPER_SYMLINKS := $(TARGET_OUT_VENDOR)/lib64/hw
+$(GATEKEEPER_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@mkdir -p $@
+	@ln -sf libMcGatekeeper.so $(TARGET_OUT_VENDOR)/lib64/hw/gatekeeper.trustonic.so
+
+ALL_DEFAULT_INSTALLED_MODULES += $(GATEKEEPER_SYMLINKS)

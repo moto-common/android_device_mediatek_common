@@ -33,5 +33,16 @@ PRODUCT_PACKAGES += \
     libsfplugin_ccodec_utils.vendor \
     libstagefright_softomx.vendor
 
+# Properties
+## Need disable c2 logs for performance
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.mtk.c2.enable.vdec.log=0 \
+    vendor.mtk.c2.enable.comp.log=0 \
+    vendor.mtk.c2.enable.venc.log=0 \
+    vendor.mtk.c2.enable.bm.log=0 \
+    vendor.mtk.c2.enable.buffer.log=0 \
+    vendor.mtk.c2.enable.rpu.log=0 \
+    vendor.mtk.c2.enable.feature.log=0
+
 # VINTF
 DEVICE_MANIFEST_FILE += $(MTK_COMMON_PATH)/vendor/media-c2/c2-manifest.xml

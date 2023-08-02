@@ -1,5 +1,17 @@
 <manifest version="1.0" type="device">
     <hal format="hidl">
+        <name>vendor.mediatek.hardware.radio_op</name>
+        <transport>hwbinder</transport>
+        <version>3.0</version>
+        <interface>
+            <name>IRadioOp</name>
+            <instance>OpImsRILd1</instance>
+            <instance>slot1</instance>
+        </interface>
+        <fqname>@3.0::IRadioOp/OpImsRILd1</fqname>
+        <fqname>@3.0::IRadioOp/slot1</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <version>1.2</version>

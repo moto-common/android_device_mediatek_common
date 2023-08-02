@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Global Display Configuration
-include $(MTK_COMMON_PATH)/vendor/display/display.mk
-
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service
 

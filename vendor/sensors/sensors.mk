@@ -12,10 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# HAL
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service
+# Hardware
+ifeq ($(call is-kernel-greater-than-or-equal-to,5.4),true)
+  PRODUCT_PACKAGES += \
+      android.hardware.sensors@2.0-service.multihal
+else
+  # HAL
+  PRODUCT_PACKAGES += \
+      android.hardware.sensors@1.0-impl \
+      android.hardware.sensors@1.0-service
 
-# VINTF
-DEVICE_MANIFEST_FILE += $(MTK_COMMON_PATH)/vendor/sensors/android.hardware.sensors_v1.0.xml
+  # VINTF
+  DEVICE_MANIFEST_FILE += $(MTK_COMMON_PATH)/vendor/sensors/android.hardware.sensors_v1.0.xml
+endif
+
+# Sensor Enable
+PRODUCT_PROPERTY_OVERRIDES += ro.vendor.mtk.sensor.support=yes

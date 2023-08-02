@@ -1,0 +1,26 @@
+# Gatekeeper
+vendor/lib64/hw/libMcGatekeeper.so
+vendor/lib64/hw/libSoftGatekeeper.so
+
+# Keymint
+vendor/bin/hw/android.hardware.security.keymint-service.trustonic
+vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc
+-vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xml
+-vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
+-vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
+vendor/lib64/hw/kmsetkey.trustonic.so
+
+# TEE
+vendor/bin/hw/vendor.trustonic.tee@1.1-service
+vendor/bin/TBaseDeviceBinding
+vendor/bin/mcDriverDaemon 
+vendor/etc/init/tee.rc
+vendor/etc/init/trustonic.rc
+vendor/etc/init/vendor.trustonic.tee@1.1-service.rc
+vendor/lib/libMcClient.so
+vendor/lib/libMcRegistry.so
+vendor/lib/libTBaseProvisioning.so
+vendor/lib64/libMcClient.so
+vendor/lib64/vendor.trustonic.tee.tui@1.0.so
+vendor/lib64/vendor.trustonic.tee@1.0.so
+vendor/lib64/vendor.trustonic.tee@1.1.so
