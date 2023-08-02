@@ -31,7 +31,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.earlyGl.app.duration=17222222 \
     debug.sf.hwc.min.duration=0 \
     ro.hardware.hwcomposer=mtk_common \
-    ro.hardware.gralloc=common
+    ro.hardware.gralloc=common \
+    ro.hardware.vulkan=mali
 
 DEVICE_MANIFEST_FILE += \
     $(MTK_COMMON_PATH)/vendor/display/$(TARGET_BOARD_PLATFORM)/display-manifest.xml
