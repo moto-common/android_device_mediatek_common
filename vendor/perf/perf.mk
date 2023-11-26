@@ -17,6 +17,10 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkpower@1.1.vendor \
     vendor.mediatek.hardware.mtkpower@1.2.vendor
 
+# Configs
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(MTK_COMMON_PATH)/vendor/perf/configs/$(TARGET_BOARD_PLATFORM)/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # VINTF
 DEVICE_MANIFEST_FILE += \
     $(MTK_COMMON_PATH)/vendor/perf/perf-manifest.xml
