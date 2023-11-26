@@ -21,8 +21,11 @@ include $(MTK_COMMON_PATH)/utils.mk
 # Components
 include $(MTK_COMMON_PATH)/components.mk
 
-# UEventD
-PRODUCT_COPY_FILES += $(MTK_COMMON_PATH)/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
+# Hardware
+PRODUCT_USES_MTK_HARDWARE := true
 
 # IRQ Balancer
 PRODUCT_PACKAGES += rebalance_interrupts-vendor
+
+# UEventD
+PRODUCT_COPY_FILES += $(MTK_COMMON_PATH)/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
