@@ -13,8 +13,10 @@
 # limitations under the License.
 
 PRODUCT_PACKAGES += \
-    libmtkperf_client_vendor \
     vendor.mediatek.hardware.mtkpower@1.0.vendor \
     vendor.mediatek.hardware.mtkpower@1.1.vendor \
-    vendor.mediatek.hardware.mtkpower@1.2.vendor \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub
+    vendor.mediatek.hardware.mtkpower@1.2.vendor
+
+# VINTF
+DEVICE_MANIFEST_FILE += \
+    $(MTK_COMMON_PATH)/vendor/perf/perf-manifest.xml

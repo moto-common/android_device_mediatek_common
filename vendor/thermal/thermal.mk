@@ -16,6 +16,10 @@
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl
 
+# Props
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.mtk_thermal_2_0=1
+
 # VINTF
 DEVICE_MANIFEST_FILE += \
     $(MTK_COMMON_PATH)/vendor/thermal/thermal-manifest.xml
