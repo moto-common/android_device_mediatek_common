@@ -1,5 +1,5 @@
 # Gatekeeper
-vendor/lib64/hw/libMcGatekeeper.so:vendor/lib64/hw/gatekeeper.trustonic.so
+vendor/lib64/hw/libMcGatekeeper.so
 vendor/lib64/hw/libSoftGatekeeper.so
 
 # Keymaster

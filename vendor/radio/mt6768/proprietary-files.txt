@@ -63,7 +63,7 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 
 # Radio (IMS)
 bin/vtservice
-etc/init/init.vtservice.rc
+#etc/init/init.vtservice.rc
 -framework/mediatek-common.jar
 -framework/mediatek-framework.jar
 -framework/mediatek-ims-base.jar

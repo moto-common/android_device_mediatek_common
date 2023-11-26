@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Global Keymaster Configuration
-include $(MTK_COMMON_PATH)/vendor/keymaster-trustonic/keymaster-trustonic-global.mk
-
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V1-ndk_platform.vendor \
     android.hardware.security.secureclock-V1-ndk_platform.vendor \

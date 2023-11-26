@@ -27,7 +27,10 @@ DEVICE_MANIFEST_FILE += \
     $(MTK_COMMON_PATH)/vendor/keymaster-trustonic/gatekeeper-manifest.xml \
     $(MTK_COMMON_PATH)/vendor/keymaster-trustonic/trustonic-manifest.xml
 
-# add guard for keymint    $(MTK_COMMON_PATH)/vendor/keymaster-trustonic/keymaster-manifest.xml \
+ifneq ($(TARGET_BOARD_PLATFORM),mt6879)
+  DEVICE_MANIFEST_FILE += \
+      $(MTK_COMMON_PATH)/vendor/keymaster-trustonic/keymaster-manifest.xml
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.kmsetkey=trustonic \
