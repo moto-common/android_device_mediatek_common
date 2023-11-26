@@ -1,6 +1,6 @@
 # AEE
-vendor/bin/aee_aedv64_v2|320e68710f65143aaf5c4f26af6327484a4eaefc
-vendor/bin/aeev_v2|e1852781481e96b212212566ab65b5c1f8d75a09
-vendor/bin/mrdump_tool|f0e1aff2af6d2e6e2a2189b05deccc5b2972e7e2
+vendor/bin/aee_aedv64_v2
+vendor/bin/aeev_v2
+vendor/bin/mrdump_tool
 vendor/lib64/libaedv.so
 vendor/lib/libaedv.so

@@ -13,16 +13,8 @@
 # limitations under the License.
 
 PRODUCT_PACKAGES += \
+    libmtkperf_client_vendor \
     vendor.mediatek.hardware.mtkpower@1.0.vendor \
     vendor.mediatek.hardware.mtkpower@1.1.vendor \
     vendor.mediatek.hardware.mtkpower@1.2.vendor \
-    android.hardware.power-V2-ndk_platform.vendor.32
-
-#    libmtkperf_client_vendor \
-#    vendor.mediatek.hardware.mtkpower@1.2-service.stub
-
-#PRODUCT_COPY_FILES += \
-#    prebuilts/vndk/v31/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.power-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power-V2-ndk_platform.so
-
-DEVICE_MANIFEST_FILE += \
-    $(MTK_COMMON_PATH)/vendor/perf/perf-manifest.xml
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub

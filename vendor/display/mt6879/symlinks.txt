@@ -3,7 +3,7 @@ lib64/egl/libGLES_mali.so
 lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 lib64/hw/gralloc.common.so
-lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
+lib64/hw/vendor.mediatek.hardware.pq@2.12-impl.so
 lib64/hw/vulkan.mali.so
 lib64/arm.graphics-V1-ndk_platform.so
 lib64/libaiselector.so
@@ -18,7 +18,7 @@ lib/egl/libGLES_mali.so
 lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 lib/hw/gralloc.common.so
-lib/hw/vendor.mediatek.hardware.pq@2.15-impl.so
+lib/hw/vendor.mediatek.hardware.pq@2.12-impl.so
 lib/hw/vulkan.mali.so
 lib/arm.graphics-V1-ndk_platform.so
 lib/libaiselector.so
