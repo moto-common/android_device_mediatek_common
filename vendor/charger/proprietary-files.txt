@@ -1,0 +1,4 @@
+# Charger
+system/bin/kpoc_charger
+system/etc/init/kpoc_charger.rc
+system/lib64/libshowlogo.so
