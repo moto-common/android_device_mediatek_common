@@ -7,10 +7,8 @@ vendor/lib/libarmnn.so
 vendor/lib/libcmdl_ndk.mtk.vndk.so
 vendor/lib/libcmdl.so
 vendor/lib/libneuropilot_hal_utils.so
-# STOPSHIP
 vendor/lib/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib/vendor.mediatek.hardware.mmagent@1.1.so
-# END STOPSHIP
 vendor/lib64/libarmnn_ndk.mtk.vndk.so
 vendor/lib64/libarmnn.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
@@ -18,7 +16,5 @@ vendor/lib64/libcmdl.so
 vendor/lib64/libmmagent.so
 vendor/lib64/libneuron_platform.so
 vendor/lib64/libneuropilot_hal_utils.so
-# STOPSHIP
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
-# END STOPSHIP

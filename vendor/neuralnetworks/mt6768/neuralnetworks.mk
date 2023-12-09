@@ -12,14 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Interfaces
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.0.vendor \
-    android.hardware.neuralnetworks@1.1.vendor \
-    android.hardware.neuralnetworks@1.2.vendor \
-    android.hardware.neuralnetworks@1.3.vendor \
-    libtextclassifier_hash.vendor
+# Init
+PRODUCT_COPY_FILES += \
+    $(MTK_COMMON_PATH)/vendor/neuralnetworks/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
 
-# Properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.mtk_nn_baseline_support=1
+# VINTF
+DEVICE_MANIFEST_FILE += \
+    $(MTK_COMMON_PATH)/vendor/neuralnetworks/mt6768/nn-manifest.xml
