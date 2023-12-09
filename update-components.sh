@@ -13,7 +13,7 @@ process_rel_file() {
     # Command 1
   elif [[ "$content" == $(cat "$base_directory"/rels/mt6879-tesla) ]]; then
     echo "Running command 2 in directory: $(dirname "$rel_file")"
-    ./extract-files.sh /data/build/userdata/electimon/android_tools/dumps/XT2205-3_TESLA_RETUS_12_SYS_S2ST32.71-118-4_subsidy-DEFAULT_regulatory-DEFAULT_cid50_CFC.xml
+    ./extract-files.sh /data/build/userdata/electimon/android_tools/dumps/TESLA_G_SYS_T2ST33.105-51-5-3_subsidy-DEFAULT_regulatory-DEFAULT_cid51_CFC.xml
     # Command 2
   elif [[ "$content" == $(cat "$base_directory"/rels/mt6893-lyriq) ]]; then
     echo "Running command 3 in directory: $(dirname "$rel_file")"
@@ -22,6 +22,10 @@ process_rel_file() {
   elif [[ "$content" == $(cat "$base_directory"/rels/mt6768-gnevan) ]]; then
     echo "Running command 4 in directory: $(dirname "$rel_file")"
     ./extract-files.sh /data/build/userdata/electimon/android_tools/dumps/XT2317-3_GNEVAN_ATT_13_T1TH33.75-12-6_subsidy-ATT_RSU_regulatory-DEFAULT_cid51_R3_CFC.xml/
+    # Command 4
+  elif [[ "$content" == $(cat "$base_directory"/rels/nwp2) ]]; then
+    echo "Running command 4 in directory: $(dirname "$rel_file")"
+    ./extract-files.sh /data/jenkins/rom/los-20.0/out/target/product/nwp2
     # Command 4
   else
     echo "No specific action for content: $content in directory: $(dirname "$rel_file")"
