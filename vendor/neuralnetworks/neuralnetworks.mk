@@ -18,6 +18,8 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.1.vendor \
     android.hardware.neuralnetworks@1.2.vendor \
     android.hardware.neuralnetworks@1.3.vendor \
+    libflatbuffers-cpp.vendor \
+    libruy.vendor \
     libtextclassifier_hash.vendor
 
 # Properties

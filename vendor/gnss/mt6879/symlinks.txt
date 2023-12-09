@@ -1,2 +1,0 @@
-lib64/libDR.so
-lib64/libmnl.so

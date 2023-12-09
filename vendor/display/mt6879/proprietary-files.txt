@@ -1,15 +1,9 @@
 # Display
 vendor/bin/hw/mt6879/android.hardware.graphics.allocator@4.0-service-mediatek.mt6879
-vendor/bin/hw/android.hardware.graphics.composer@2.1-service
-vendor/bin/hw/android.hardware.graphics.composer@2.3-service
 vendor/bin/hw/android.hardware.memtrack-service.mediatek
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/init/android.hardware.graphics.composer@2.1-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.2-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.3-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.4-service.rc
 vendor/etc/init/memtrack-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
@@ -30,7 +24,6 @@ vendor/lib/hw/mt6879/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib/hw/mt6879/gralloc.common.so
 vendor/lib/hw/mt6879/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib/hw/mt6879/vulkan.mali.so
-vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/vendor.mediatek.hardware.mms@1.6-impl.so
 vendor/lib/mt6879/arm.graphics-V1-ndk_platform.so
 vendor/lib/mt6879/libaiselector.so
@@ -94,7 +87,6 @@ vendor/lib64/hw/mt6879/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib64/hw/mt6879/gralloc.common.so
 vendor/lib64/hw/mt6879/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib64/hw/mt6879/vulkan.mali.so
-vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/hwcomposer.mtk_common.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so
 vendor/lib64/mt6879/arm.graphics-V1-ndk_platform.so
@@ -118,7 +110,6 @@ vendor/lib64/libgralloc_extra.so
 vendor/lib64/libgralloc_metadata.so
 vendor/lib64/libgralloctypes_mtk.so
 vendor/lib64/libhdrvideo.so
-vendor/lib64/libhwc2onfbadapter.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libmml.so

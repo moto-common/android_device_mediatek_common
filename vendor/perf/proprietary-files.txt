@@ -11,8 +11,6 @@ vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.nwk_opt@1.0-service.rc
-vendor/etc/vintf/manifest/power-default.xml
-vendor/lib/hw/power.default.so
 vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
 vendor/lib/libged.so
 vendor/lib/libmtkperf_client_vendor.so
@@ -26,8 +24,8 @@ vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so
 vendor/lib/vendor.mediatek.hardware.mtkpower@1.1.so
 vendor/lib/vendor.mediatek.hardware.mtkpower@1.2.so
 vendor/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
-vendor/lib64/hw/power.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
+vendor/lib64/android.hardware.power-service-mediatek.so
 vendor/lib64/libged.so
 vendor/lib64/libmmagent.so
 vendor/lib64/libmtkperf_client_vendor.so

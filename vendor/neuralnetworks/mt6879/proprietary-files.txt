@@ -10,7 +10,6 @@ vendor/lib/libarmnn.so
 vendor/lib/libarmnn_ndk.mtk.vndk.so
 vendor/lib/libcmdl.so
 vendor/lib/libcmdl_ndk.mtk.vndk.so
-vendor/lib/libflatbuffers-cpp.so
 vendor/lib/libmvpu_cic_ci_compiler.so
 vendor/lib/libmvpu_clc_cl_compiler.so
 vendor/lib/libmvpu_clc_mvpu_debuginfo.so
@@ -32,7 +31,6 @@ vendor/lib/libneuron_graph_delegate.mtk.so
 vendor/lib/libneuropilot_hal_utils.so
 vendor/lib/libnpagent.so
 vendor/lib/libnwk_opt_halwrap_vendor.so
-vendor/lib/libruy.so
 vendor/lib/libtflite_mtk.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.1.so
@@ -44,7 +42,6 @@ vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.vndk.so
 vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
-vendor/lib64/libflatbuffers-cpp.so
 vendor/lib64/libmvpu_cic_ci_compiler.so
 vendor/lib64/libmvpu_clc_cl_compiler.so
 vendor/lib64/libmvpu_clc_mvpu_debuginfo.so
@@ -68,7 +65,6 @@ vendor/lib64/libneuropilot_hal_utils.so
 vendor/lib64/libnpagent.so
 vendor/lib64/libnpagent_server.so
 vendor/lib64/libnwk_opt_halwrap_vendor.so
-vendor/lib64/libruy.so
 vendor/lib64/libtflite_mtk.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.1.so
