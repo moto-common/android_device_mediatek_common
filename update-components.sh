@@ -42,6 +42,11 @@ main() {
 
   # Process each directory
   for dir in $rel_directories; do
+    if [[ ! -z "$1" ]]; then
+      if [[ "$dir" != *$1* ]]; then
+        continue
+      fi
+    fi
     cd "$dir" || continue
     rel_file="./REL"
 
@@ -55,5 +60,4 @@ main() {
 }
 
 # Run the main function
-main
-
+main $@
