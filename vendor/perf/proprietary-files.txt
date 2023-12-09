@@ -22,3 +22,12 @@ vendor/lib64/android.hardware.power-service-mediatek.so
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
+
+# Perf (EARA)
+vendor/bin/eara_io_service
+vendor/etc/init/eara-io-service.rc
+vendor/lib64/lib_eara_io_scndet.so
+vendor/lib64/lib_eara_io_service.so
+vendor/lib64/lib_eara_io_systracer.so
+vendor/lib64/lib_eara_io_timer.so
+vendor/lib64/lib_eara_io_util.so
