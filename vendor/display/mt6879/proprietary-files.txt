@@ -15,7 +15,7 @@ vendor/lib/egl/libMEOW_trace.so
 vendor/lib/hw/mt6879/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib/hw/mt6879/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib/hw/mt6879/gralloc.common.so
-vendor/lib/hw/mt6879/vendor.mediatek.hardware.pq@2.12-impl.so
+vendor/lib/hw/mt6879/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib/hw/mt6879/vulkan.mali.so
 vendor/lib/mt6879/arm.graphics-V1-ndk_platform.so
 vendor/lib/mt6879/libaiselector.so
@@ -51,6 +51,9 @@ vendor/lib/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib/vendor.mediatek.hardware.pq@2.10.so
 vendor/lib/vendor.mediatek.hardware.pq@2.11.so
 vendor/lib/vendor.mediatek.hardware.pq@2.12.so
+vendor/lib/vendor.mediatek.hardware.pq@2.13.so
+vendor/lib/vendor.mediatek.hardware.pq@2.14.so
+vendor/lib/vendor.mediatek.hardware.pq@2.15.so
 vendor/lib/vendor.mediatek.hardware.pq@2.2.so
 vendor/lib/vendor.mediatek.hardware.pq@2.3.so
 vendor/lib/vendor.mediatek.hardware.pq@2.4.so
@@ -67,7 +70,7 @@ vendor/lib64/egl/libMEOW_qt.so
 vendor/lib64/egl/libMEOW_trace.so
 vendor/lib64/hw/mt6879/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib64/hw/mt6879/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib64/hw/mt6879/vendor.mediatek.hardware.pq@2.12-impl.so
+vendor/lib64/hw/mt6879/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib64/hw/mt6879/gralloc.common.so
 vendor/lib64/hw/mt6879/vulkan.mali.so
 vendor/lib64/hw/hwcomposer.mtk_common.so
@@ -107,6 +110,9 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.11.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.12.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.13.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.14.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.15.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.2.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.3.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.4.so

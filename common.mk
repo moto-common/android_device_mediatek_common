@@ -21,6 +21,9 @@ include $(MTK_COMMON_PATH)/utils.mk
 # Components
 include $(MTK_COMMON_PATH)/components.mk
 
+# Hardware
+PRODUCT_USES_MTK_HARDWARE := true
+
 # Logtag
 include $(MTK_COMMON_PATH)/logtag.mk
 

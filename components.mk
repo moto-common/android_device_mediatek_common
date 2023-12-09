@@ -12,9 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifneq ($(M_C_INCL),true)
 # MTK Common Components
 include $(MTK_COMMON_PATH)/components-logic.mk
 
 # Include the selected components' product makefiles and vendor makefiles
 include $(COMPONENT_PROD_INCLUDES)
 include $(VENDOR_PROD_INCLUDES)
+M_C_INCL := true
+endif

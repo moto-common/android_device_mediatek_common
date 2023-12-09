@@ -7,7 +7,12 @@
             <name>IMtkPower</name>
             <instance>default</instance>
         </interface>
+        <interface>
+            <name>IMtkPerf</name>
+            <instance>default</instance>
+        </interface>
         <fqname>@1.2::IMtkPower/default</fqname>
+        <fqname>@1.2::IMtkPerf/default</fqname>
     </hal>
     <hal format="aidl">
         <name>android.hardware.power</name>
