@@ -28,6 +28,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
+# VINTF
+DEVICE_MANIFEST_FILE += \
+    $(MTK_COMMON_PATH)/vendor/display/display-manifest.xml
+
 # VNDK
 PRODUCT_PACKAGES += \
     libdrm.vendor

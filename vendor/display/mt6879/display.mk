@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Global Display Configuration
-include $(MTK_COMMON_PATH)/vendor/display/display.mk
-
 PRODUCT_COPY_FILES += \
     $(MTK_COMMON_PATH)/vendor/display/mt6879/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 
