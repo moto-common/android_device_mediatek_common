@@ -1,0 +1,3 @@
+# Sensors
+vendor/lib64/libsensorndkbridge.so:vendor/lib64/libsensorndkbridge-v32.so
+
