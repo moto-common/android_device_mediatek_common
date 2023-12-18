@@ -69,6 +69,9 @@ function blob_fixup() {
         vendor/lib*/hw/*/vendor.mediatek.hardware.pq@2.*-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
+        vendor/bin/mnld)
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-v32.so" "${2}"
+            ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek)
             ;&
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
