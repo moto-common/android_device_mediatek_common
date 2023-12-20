@@ -1,0 +1,25 @@
+# Radio (IMS)
+system_ext/bin/vtservice
+system_ext/etc/init/init.vtservice.rc
+-system_ext/framework/mediatek-common.jar|3f3a53f685555d70798a791b8d9f4b4f53b43edd
+-system_ext/framework/mediatek-framework.jar|90123c934150466577a7d9b57a5508e7a43a5ce9
+-system_ext/framework/mediatek-ims-base.jar|14a0e5081138ff0dadaa4218616ded6f38676d87
+-system_ext/framework/mediatek-ims-oem-plugin.jar|6740c6e4df9db3d610900c8d2959cb51ba4cc5c2
+system_ext/lib/libmtk_vt_wrapper.so
+system_ext/lib/libvcodec_cap.so
+system_ext/lib/libvcodec_capenc.so
+system_ext/lib64/libcomutils.so
+system_ext/lib64/libimsma.so
+system_ext/lib64/libimsma_adapt.so
+system_ext/lib64/libimsma_rtp.so
+system_ext/lib64/libimsma_socketwrapper.so
+system_ext/lib64/libmtk_vt_service.so
+system_ext/lib64/libmtk_vt_wrapper.so
+system_ext/lib64/libsignal.so
+system_ext/lib64/libsink.so
+system_ext/lib64/libsource.so
+system_ext/lib64/libvcodec_cap.so
+system_ext/lib64/libvcodec_capenc.so
+system_ext/lib64/libvt_avsync.so
+-system_ext/priv-app/ImsService/ImsService.apk|6460d1591af40cae2a76bff8117e593a67c79882
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so

@@ -26,7 +26,11 @@ process_rel_file() {
   elif [[ "$content" == $(cat "$base_directory"/rels/nwp2) ]]; then
     echo "Running command 4 in directory: $(dirname "$rel_file")"
     ./extract-files.sh /data/jenkins/rom/los-20.0/out/target/product/nwp2
-    # Command 4
+    # Command 5
+  elif [[ "$content" == $(cat "$base_directory"/rels/mt6893-tecno) ]]; then
+    echo "Running command 4 in directory: $(dirname "$rel_file")"
+    ./extract-files.sh /data/build/userdata/electimon/android_tools/dumps/TECNO-CK9n
+    # Command 6
   else
     echo "No specific action for content: $content in directory: $(dirname "$rel_file")"
   fi
