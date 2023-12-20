@@ -28,10 +28,11 @@ DEVICE_MANIFEST_FILE += \
     $(MTK_COMMON_PATH)/vendor/radio/radio-manifest.xml
 
 # IMS
-#PRODUCT_BOOT_JARS += \
-#    mediatek-common \
-#    mediatek-framework \
-#    mediatek-ims-base \
-#    mediatek-ims-oem-plugin
+PRODUCT_BOOT_JARS += \
+    mediatek-common \
+    mediatek-framework \
+    mediatek-ims-base \
+    mediatek-ims-oem-plugin
 
 PRODUCT_COPY_FILES += $(MTK_COMMON_PATH)/vendor/radio/privapp-permissions-mtk-ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mtk-ims.xml
+PRODUCT_COPY_FILES += $(MTK_COMMON_PATH)/vendor/radio/privapp-permissions-mtk-ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-mtk-ims.xml
