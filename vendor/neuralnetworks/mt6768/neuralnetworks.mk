@@ -14,7 +14,7 @@
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(MTK_COMMON_PATH)/vendor/neuralnetworks/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
+    $(MTK_COMMON_PATH)/vendor/neuralnetworks/mt6768/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
 
 # VINTF
 DEVICE_MANIFEST_FILE += \
