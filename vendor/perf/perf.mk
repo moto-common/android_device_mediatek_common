@@ -13,6 +13,7 @@
 # limitations under the License.
 
 PRODUCT_PACKAGES += \
+    android.hardware.power-V1-ndk.vendor \
     android.hardware.power-V2-ndk.vendor \
     vendor.mediatek.hardware.mtkpower@1.0.vendor \
     vendor.mediatek.hardware.mtkpower@1.1.vendor \
