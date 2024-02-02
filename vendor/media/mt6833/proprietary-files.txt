@@ -1,0 +1,26 @@
+# Media (VPU)
+vendor/bin/vpud
+vendor/etc/init/vpud.rc
+vendor/lib/libvpu5.so
+vendor/lib/libvpud_vcodec.so
+vendor/lib64/libvpu5.so
+
+# Media (VCodec)
+vendor/lib/AVCSecureVdecCA.so
+vendor/lib/HEVCSecureVdecCA.so
+vendor/lib/VP9SecureVdecCA.so
+vendor/lib/libAVCSecureVencCA.so
+vendor/lib/libgz_gp_client.so
+vendor/lib/libthha.so
+vendor/lib/libvcodec_oal.so
+vendor/lib/libvcodec_utility.so
+vendor/lib/libvcodecdrv_header_stub.so
+vendor/lib/libvcodecdrv.so
+vendor/lib64/AVCSecureVdecCA.so
+vendor/lib64/HEVCSecureVdecCA.so
+vendor/lib64/VP9SecureVdecCA.so
+vendor/lib64/libAVCSecureVencCA.so
+vendor/lib64/libgz_gp_client.so
+vendor/lib64/libthha.so
+vendor/lib64/libvcodec_oal.so
+vendor/lib64/libvcodecdrv_header_stub.so

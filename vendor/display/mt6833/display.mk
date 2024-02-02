@@ -12,18 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_COPY_FILES += \
-    $(MTK_COMMON_PATH)/vendor/wlan/vendor_hals.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_hals/vendor_hals.xml
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-service
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.wifi.sap.concurrent.iface=ap1 \
-    ro.vendor.wifi.sap.interface=ap0
+    debug.sf.use_phase_offsets_as_durations=1 \
+    debug.sf.late.sf.duration=30000000 \
+    debug.sf.late.app.duration=24000000 \
+    debug.sf.early.sf.duration=30000000 \
+    debug.sf.early.app.duration=24000000 \
+    debug.sf.earlyGl.sf.duration=30000000 \
+    debug.sf.earlyGl.app.duration=24000000 \
+    debug.sf.hwc.min.duration=23000000
 
-# WMT
-ifeq ($(TARGET_BOARD_PLATFORM),mt6768)
- $(call inherit-product, vendor/mediatek/common/vendor/wmt/wmt-vendor.mk)
-else ifeq ($(TARGET_BOARD_PLATFORM),mt6833)
- $(call inherit-product, vendor/mediatek/common/vendor/wmt/wmt-vendor.mk)
-else ifeq ($(TARGET_BOARD_PLATFORM),mt6879)
- $(call inherit-product, vendor/mediatek/common/vendor/connac2x/connac2x-vendor.mk)
-endif
+DEVICE_MANIFEST_FILE += \
+    $(MTK_COMMON_PATH)/vendor/display/$(TARGET_BOARD_PLATFORM)/display-manifest.xml

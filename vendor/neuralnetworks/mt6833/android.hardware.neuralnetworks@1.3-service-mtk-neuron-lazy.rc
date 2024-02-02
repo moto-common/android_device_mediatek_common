@@ -1,0 +1,19 @@
+service neuralnetworks_hal_service_mtk_neuron /vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron-lazy
+    interface android.hardware.neuralnetworks@1.0::IDevice mtk-neuron
+    interface android.hardware.neuralnetworks@1.1::IDevice mtk-neuron
+    interface android.hardware.neuralnetworks@1.2::IDevice mtk-neuron
+    interface android.hardware.neuralnetworks@1.3::IDevice mtk-neuron
+    interface android.hardware.neuralnetworks@1.0::IDevice mtk-gpu
+    interface android.hardware.neuralnetworks@1.1::IDevice mtk-gpu
+    interface android.hardware.neuralnetworks@1.2::IDevice mtk-gpu
+    interface android.hardware.neuralnetworks@1.3::IDevice mtk-gpu
+    interface vendor.mediatek.hardware.apuware.utils@2.0::IApuwareUtils default
+
+    class hal
+    user system
+    group system readproc
+    task_profiles NNApiHALPerformance
+    oneshot
+
+on post-fs-data
+    mkdir /data/vendor/nn 0775 system system
